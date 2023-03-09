@@ -5,7 +5,8 @@ import bodyParser from "body-parser";
 import mongoose from "mongoose";
 import allRoutes from "./routes/allRoutes.js";
 import cookieParser from "cookie-parser";
-import swagger  from "swagger-ui-express";
+import swaggerUI from "swagger-ui-express";
+import YAML from 'yamljs';
 
 
 mongoose.set('strictQuery', false);
@@ -53,6 +54,8 @@ if(con){
 app.use("/api/v1/", allRoutes);
 
 
+const swaggerJsDoc = YAML.load('./api.yaml');
+app.use("/api-docs", swaggerUI.serve, swaggerUI.setup(swaggerJsDoc));
 
 
 
