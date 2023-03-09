@@ -23,6 +23,17 @@ paths:
         - application/x-www-form-urlencoded
       parameters:
         - in: formData
+          name: firstname
+          type: string
+          required: true
+          description: User 
+          - in: formData
+          name: lastname
+          type: string
+          required: true
+          description: User lastname
+
+        - in: formData
           name: email
           type: string
           required: true
@@ -85,10 +96,7 @@ paths:
           name: image
           type: file
           description: upload image
-        - in: header
-          name: Authorization
-          type: string
-          description: secret-token
+  
       responses:
         200:
           shema:
@@ -170,10 +178,6 @@ paths:
           name: image
           type: file
           description: upload image
-        - in: header
-          name: Authorization
-          type: string
-          description: secret-token
       responses:
         200:
           shema:
@@ -211,94 +215,6 @@ paths:
         500:
           description: Somthing went wrong, try again
 
-#Add comments
-  /api/v1/blogs/{id}/comments:
-    post:
-      summary: Add comment
-      tags:
-        - Comments and Likes managing APIs
-      produces:
-        - application/json
-      consumes:
-        - application/json
-      parameters:
-        - name: id
-          in: path
-          required: true
-          schema:
-            type: string
-        - in: body
-          name: user
-          schema:
-            type: object
-            properties:
-              user:
-                type: string
-                required: true
-                description: User name
-              email:
-                type: string
-                required: true
-                description: User email
-              comment:
-                type: string
-                required: true
-                description: Comment
-      responses:
-        200:
-          schema:
-            type: object
-        500:
-          description: Somthing went wrong, try again
-
-#Add likes on the blog
-  /api/v1/blogs/{id}/likes:
-    post:
-      summary: Add like on blog
-      tags:
-        - Comments and Likes managing APIs
-      consumes:
-        - application/json
-      parameters:
-        - name: id
-          in: path
-          required: true
-          schema:
-            type: string
-      responses:
-        200:
-          schema:
-            type: object
-        404:
-          schema:
-            type: object
-        500:
-          description: Somthing went wrong, try again
-    get:
-      summary: Returns likes of the blog
-      tags:
-        - Comments and Likes managing APIs
-      parameters:
-        - name: id
-          in: path
-          required: true
-          schema:
-            type: string
-      responses:
-        200:
-          description: Likes of the blog
-          schema:
-            type: object
-            example:
-              id: 63a9dc81564d50140ff74e57
-              title: JavaScript Tutorial
-              content: Learn JS lay now!
-        404: 
-          schema:
-            type: object
-
-        500:
-          description: Somthing went wrong, try again
 
 #Send message
   /api/v1/messages:
