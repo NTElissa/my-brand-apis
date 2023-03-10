@@ -230,9 +230,9 @@ paths:
                 type: string
                 required: true
                 description: Blog title
-              image:
+              email:
                 type: string
-                description: Blog image
+                description: Blog email
               content:
                 type: string
                 required: true
@@ -267,9 +267,9 @@ paths:
                     title:
                       type: string
                       description: Blog title
-                    image:
+                    email:
                       type: string
-                      description: Blog image
+                      description: Blog email
                     content:
                       type: string
                       description: Blog content

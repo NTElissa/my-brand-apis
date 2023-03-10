@@ -53,7 +53,7 @@ if(con){
 
 app.use("/api/v1/", allRoutes);
 
-
+// connect to yaml file
 const swaggerJsDoc = YAML.load('./api.yaml');
 app.use("/api-docs", swaggerUI.serve, swaggerUI.setup(swaggerJsDoc));
 
