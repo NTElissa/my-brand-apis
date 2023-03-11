@@ -35,17 +35,17 @@ app.get("/", (req, res) => {
 // const db = process.env.NODE_ENV === "test" ? "mybrandtest" : "mybrand3";
 mongoose.set('strictQuery', false);
 let con = null;
-if(process.env.NODE_ENV === "test"){
- con = mongoose.connect(process.env.MONGODB_URL_TEST, {
-        useNewUrlParser: true,
-        useUnifiedTopology: true
-    });
-} else{
+// if(process.env.NODE_ENV === "test"){
+//  con = mongoose.connect(process.env.MONGODB_URL_TEST, {
+//         useNewUrlParser: true,
+//         useUnifiedTopology: true
+//     });
+// } else{
   con = mongoose.connect(process.env.MONGODB_URL, {
         useNewUrlParser: true,
         useUnifiedTopology: true
     });
-}
+
 
 if(con){
     console.log('Database has been connected')

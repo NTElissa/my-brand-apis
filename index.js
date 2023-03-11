@@ -8,10 +8,10 @@ import YAML from 'yamljs'
 import cors from 'cors'
 
 dotenv.config({ config: process.env.NODE_ENV === 'dev' });
-const db = process.env.NODE_ENV === "test" ? "my_brand_db_test" : "my-brand-db";
+const db = process.env.NODE_ENV === "test" ? "mybrandtest" : "mybrandnodejs";
 // const url = `mongodb://localhost/${db}`;
 // const xy = '';
-const url = `mongodb+srv://jayd:jaydatlas@cluster0.umnubqc.mongodb.net/${db}?retryWrites=true`;
+const url = `mongodb+srv://ntihinduka:ntihinduka@cluster0.i5jwzd6.mongodb.net/${db}?retryWrites=true`;
 
 const app = express();
 const port = process.env.PORT
