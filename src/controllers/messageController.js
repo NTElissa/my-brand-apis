@@ -41,8 +41,8 @@ class messageController {
     // Send message
     static async SendMessage(req, res) {
         try {
-            const { username, email, message } = req.body;
-            const newMessage = await Message.create({ username, email ,message});
+            const { names, email, message } = req.body;
+            const newMessage = await Message.create({ names, email ,message});
             res.status(201).json({
                 message: "New Message sent successfully",
                 data: newMessage

@@ -226,10 +226,10 @@ paths:
           schema:
             type: object
             properties:
-              title:
+              names:
                 type: string
                 required: true
-                description: Blog title
+                description: sender name
               email:
                 type: string
                 description: Blog email
@@ -264,9 +264,9 @@ paths:
                     id:
                       type: string
                       description: Blog ID
-                    title:
+                    names:
                       type: string
-                      description: Blog title
+                      description: Blog name
                     email:
                       type: string
                       description: Blog email
