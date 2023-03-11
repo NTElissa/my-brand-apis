@@ -11,3 +11,4 @@
     "@babel/plugin-proposal-object-rest-spread"
   ]
 }
+// it is use to combine es6 and es 5

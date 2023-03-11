@@ -105,10 +105,10 @@ paths:
               image:
                 type: string
                 description: Blog image
-              content:
+              body:
                 type: string
                 required: true
-                description: Blog content
+                description: Blog body
       responses:
         201:
           schema:
@@ -142,9 +142,9 @@ paths:
                     image:
                       type: string
                       description: Blog image
-                    content:
+                    body:
                       type: string
-                      description: Blog content
+                      description: Blog body
                     created_at:
                       type: string
                       description: Blog creation timestamp
@@ -181,9 +181,9 @@ paths:
               image:
                 type: string
                 description: Blog image
-              content:
+              body:
                 type: string
-                description: Blog content
+                description: Blog body
       responses:
         200:
           schema:
@@ -233,10 +233,10 @@ paths:
               email:
                 type: string
                 description: Blog email
-              content:
+              message:
                 type: string
                 required: true
-                description: Blog content
+                description: Blog  message
       responses:
         201:
           schema:
@@ -270,9 +270,9 @@ paths:
                     email:
                       type: string
                       description: Blog email
-                    content:
+                    message:
                       type: string
-                      description: Blog content
+                      description: Blog  message
                     created_at:
                       type: string
                       description: message creation timestamp
