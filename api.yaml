@@ -23,8 +23,9 @@ paths:
       consumes:
         - application/json
       parameters:
-        - in: body
+        - in: formData
           name: user
+        
           schema:
             type: object
             properties:
