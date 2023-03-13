@@ -1,6 +1,6 @@
 export const validUserCredentials = {
     email: "elissa@gmail.com",
-    password: "123"
+    password: "1234567"
 }
 export const invalidUsercredentilas={
     email:"ntihindukaelissa@gmail.com",

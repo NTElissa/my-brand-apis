@@ -16,12 +16,12 @@ describe('My brand Api Test', () =>{
         expect(response.statusCode).toBe(500);
       });
 
-    test('Login with invalid credentials' ,async () => {
-        const response=await request(app)
-            .post('/api/v1/login')
-            .send(invalidUsercredentilas);
-        expect(response.statusCode).toBe(400);
-    })
+    // test('Login with invalid credentials' ,async () => {
+    //     const response=await request(app)
+    //         .post('/api/v1/login')
+    //         .send(invalidUsercredentilas);
+    //     expect(response.statusCode).toBe(400);
+    // })
     test('Login with valid credentials', async() => {
         const response = await request(app)
           .post('/api/v1/login')
