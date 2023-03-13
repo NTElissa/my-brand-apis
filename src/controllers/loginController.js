@@ -13,14 +13,14 @@ const loginController = async (req, res) => {
 
         if (!user) {
             return res.status(400).json({
-                message: "Invalid credentials",
+                message: "Invalid email",
             });
         } else {
             // check if password is correct
             const passwordMatch = await bcrypt.compare(password, user.password);
 
             if (!passwordMatch) {
-                return res.status(400).json({ message: "Please check your credentials carefully" });
+                return res.status(400).json({ message: "Please check your password carefully" });
             } else {
                 // create a JWT and send it back to the client as an HTTP-only cookie
                 const token = jwt.sign({ id: user._id }, secret);

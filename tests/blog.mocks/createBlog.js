@@ -1,5 +1,5 @@
 export const createBlog= {
-    title: "NEZA",
-    image: "dddddddddd",
-    content:"Management"
+    title: "Elissa",
+    image: "image image image",
+    body:"hello to every on"
 }

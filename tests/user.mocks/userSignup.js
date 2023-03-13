@@ -1,6 +1,6 @@
 export const signUpdata= {
-    firstname: "NEZA",
-    lastname: "DAVID",
-    email:"davido@gmail.com",
-    password:"12345"
+    firstname: "elissa",
+    lastname: "ntihinduka",
+    email:"ntihindukaelissa@gmail.com",
+    password:"123"
 }

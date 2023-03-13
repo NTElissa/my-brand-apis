@@ -1,5 +1,5 @@
 export const createMessage= {
-    username: "NEZA",
-    email: "me@gmail.com",
-    message:"Management"
+    username: "ntihinduka",
+    email: "elissa@gmail.com",
+    message:"hello every one i'am happy for you"
 }
