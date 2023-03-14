@@ -1,0 +1,14 @@
+name: hello world
+on:
+push:
+branches:
+-"main"
+pull_request:
+branches:
+-"main"
+jobs:
+hello:
+runs-on: ubuntu-tatest
+steps:
+-name: hello step
+run: echo "hello world"
