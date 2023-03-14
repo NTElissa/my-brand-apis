@@ -1,14 +1,12 @@
 swagger: "2.0"
 info:
-  title: My Brand APIs swagger Docs
+  title: My Brand APIs swagger 
   version: 1.0
 
 servers:
-  - url: 'https://mybrand-faustin.cyclic.app/'
+  - url: 'https://nice-red-chipmunk-tam.cyclic.app/api-docs/'
     description: Remote server
-  - url: 'https://mybrand-faustin-backend-production.up.railway.app/'
-    description: Remote server2
-
+  
   - url: 'http://localhost:5000'
     description: Local server
 
