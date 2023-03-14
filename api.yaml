@@ -4,7 +4,10 @@ info:
   version: 1.0
 
 servers:
- 
+  - url: 'https://mybrand-faustin.cyclic.app/'
+    description: Remote server
+  - url: 'https://mybrand-faustin-backend-production.up.railway.app/'
+    description: Remote server2
 
   - url: 'http://localhost:5000'
     description: Local server
@@ -23,9 +26,8 @@ paths:
       consumes:
         - application/json
       parameters:
-        - in: formData
+        - in: body
           name: user
-        
           schema:
             type: object
             properties:
@@ -106,10 +108,10 @@ paths:
               image:
                 type: string
                 description: Blog image
-              body:
+              content:
                 type: string
                 required: true
-                description: Blog body
+                description: Blog content
       responses:
         201:
           schema:
@@ -143,9 +145,9 @@ paths:
                     image:
                       type: string
                       description: Blog image
-                    body:
+                    content:
                       type: string
-                      description: Blog body
+                      description: Blog content
                     created_at:
                       type: string
                       description: Blog creation timestamp
@@ -182,9 +184,9 @@ paths:
               image:
                 type: string
                 description: Blog image
-              body:
+              content:
                 type: string
-                description: Blog body
+                description: Blog content
       responses:
         200:
           schema:
@@ -227,17 +229,17 @@ paths:
           schema:
             type: object
             properties:
-              names:
+              title:
                 type: string
                 required: true
-                description: sender name
-              email:
+                description: Blog title
+              image:
                 type: string
-                description: Blog email
-              message:
+                description: Blog image
+              content:
                 type: string
                 required: true
-                description: Blog  message
+                description: Blog content
       responses:
         201:
           schema:
@@ -265,15 +267,15 @@ paths:
                     id:
                       type: string
                       description: Blog ID
-                    names:
+                    title:
                       type: string
-                      description: Blog name
-                    email:
+                      description: Blog title
+                    image:
                       type: string
-                      description: Blog email
-                    message:
+                      description: Blog image
+                    content:
                       type: string
-                      description: Blog  message
+                      description: Blog content
                     created_at:
                       type: string
                       description: message creation timestamp
