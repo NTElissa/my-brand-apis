@@ -1,5 +1,9 @@
 name: Build, Test, and Deploy
 
+cache:
+  paths:
+    - node_modules/
+
 on:
   pull_request: 
   push:
