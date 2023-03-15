@@ -8,6 +8,7 @@ import YAML from 'yamljs'
 import cors from 'cors'
 
 dotenv.config({ config: process.env.NODE_ENV === 'dev' });
+// dotenv.config();
 const db = process.env.NODE_ENV === "test" ? "mybrandtest" : "mybrandnodejs";
 // const url = `mongodb://localhost/${db}`;
 // const xy = '';

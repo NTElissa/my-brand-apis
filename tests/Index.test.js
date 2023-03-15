@@ -1,4 +1,4 @@
-const request = require(supertest) 
+import request from "supertest";
 import app from "../src/app.js";
 import {createBlog} from "./blog.mocks/createBlog.js";
 import {signUpdata} from "./user.mocks/userSignup.js";
